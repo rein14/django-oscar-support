@@ -1,4 +1,7 @@
-from django.db.models import get_model
+try:
+    from django.db.models import get_model
+except ImportError:
+    from django.apps.apps import get_model
 from oscar_support import defaults
 
 
